@@ -1,4 +1,4 @@
-#DCOS on Google Compute Engine
+# DCOS on Google Compute Engine
 
 This repository contains scripts to configure a DC/OS cluster on Google Compute Engine.
 
@@ -6,7 +6,7 @@ A bootstrap node is required to run the scripts and to bootstrap the DC/OS clust
 
 **PLEASE READ THE ENTIRE DOCUMENT. YOU MUST MAKE CHANGES FOR THE SCRIPTS TO WORK IN YOUR GCE ENVIRONMENT.**
 
-##Bootstrap node configuration
+## Bootstrap node configuration
 
 **YOU MUST CREATE A PROJECT** using the google cloud console. The author created a project called trek-treckr
 
@@ -159,7 +159,7 @@ To create public nodes type
 ```bash
 ansible-playbook -i hosts add_agents.yml --extra-vars "start_id=0003 end_id=0004 agent_type=public"
 ```
-##Configurable parameters
+## Configurable parameters
 
 File './hosts' is an ansible inventory file. Text wrapped by [] represents a group name and individual entries after the group name represent hosts in that group.
 The [masters] group contains node names and IP addresses for the master nodes. In the supplied file the host name is master0 and the ip address 10.132.0.3 is assigned to 
